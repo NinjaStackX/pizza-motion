@@ -3,7 +3,7 @@ import { animate } from "motion/react";
 import { motion } from "motion/react";
 export const slideUp = {
   hidden: {
-    fontSize: "50px",
+    fontSize: "32px",
     y: "-40vh",
     opacity: 0,
   },
@@ -27,7 +27,7 @@ export const slideUp = {
 
 export const containerVariants = {
   hidden: {
-    fontSize: "50px",
+    fontSize: "32px",
     opacity: 0,
     x: "100vw",
   },
@@ -68,7 +68,7 @@ export const containerVariantsOrders = {
 };
 export const nextVariants = {
   hidden: {
-    fontSize: "50px",
+    fontSize: "32px",
     x: "-100vw",
   },
   visible: {
@@ -78,10 +78,26 @@ export const nextVariants = {
 };
 export const childVariants = {
   hidden: {
-    fontSize: "50px",
+    fontSize: "32px",
     opacity: 0,
   },
   visible: {
     opacity: 1,
+  },
+};
+export const containerToppingVariants = {
+  hidden: {
+    fontSize: "28px",
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring" },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { duration: 0.1, ease: "easeInOut" },
   },
 };

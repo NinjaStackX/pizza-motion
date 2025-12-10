@@ -2,7 +2,11 @@ import React from "react";
 import { childVariants, containerVariantsOrders } from "../utils/variants";
 
 import { motion } from "motion/react";
-const Order = ({ pizza }) => {
+import { useEffect } from "react";
+const Order = ({ pizza, setShowModal }) => {
+  useEffect(() => {
+    setTimeout(() => setShowModal(true), 5000);
+  }, [setShowModal]);
   return (
     <motion.div
       className="container order"

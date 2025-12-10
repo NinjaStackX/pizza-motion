@@ -1,24 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-
-const containerVariants = {
-  hidden: {
-    fontSize: "30px",
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { type: "spring" },
-  },
-  exit: {
-    x: "-100vw",
-    transition: { duration: 0.1 },
-    // transition: { ease: "easeInOut" },
-  },
-};
+import { containerToppingVariants } from "../utils/variants";
 
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = [
@@ -33,7 +16,7 @@ const Toppings = ({ addTopping, pizza }) => {
   return (
     <motion.div
       className="toppings container"
-      variants={containerVariants}
+      variants={containerToppingVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
