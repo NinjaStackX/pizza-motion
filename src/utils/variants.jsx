@@ -34,7 +34,11 @@ export const containerVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { type: "spring", delay: 0.5 },
+    transition: { type: "spring", delay: 1 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { duration: 0.5 },
   },
 };
 export const containerVariantsOrders = {
@@ -56,6 +60,10 @@ export const containerVariantsOrders = {
       staggerChildren: 0.4,
       when: "beforeChildren",
     },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { duration: 0.5 },
   },
 };
 export const nextVariants = {

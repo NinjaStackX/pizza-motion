@@ -9,6 +9,7 @@ const Order = ({ pizza }) => {
       variants={containerVariantsOrders}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <h2>Thank you for your order :)</h2>
       <motion.p variants={childVariants}>
