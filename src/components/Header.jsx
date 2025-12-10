@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { slideUp } from "../utils/variants";
 const Header = () => {
   return (
     <header>
@@ -17,7 +18,13 @@ const Header = () => {
         </svg>
       </div>
       <div className="title">
-        <motion.h1 animate={{ fontSize: "40px" }}>Pizza Joint</motion.h1>
+        <motion.h1
+          initial={{ y: -250 }}
+          animate={{ fontSize: "50px", y: -10 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+        >
+          Pizza Joint
+        </motion.h1>
       </div>
     </header>
   );
