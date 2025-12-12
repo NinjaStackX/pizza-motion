@@ -101,3 +101,28 @@ export const containerToppingVariants = {
     transition: { duration: 0.1, ease: "easeInOut" },
   },
 };
+export const svgVariants = {
+  hidden: {
+    rotate: -180,
+    opacity: 0,
+  },
+  visible: {
+    rotate: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
+export const pathVariants = {
+  hidden: {
+    pathLength: 0,
+    fill: "rgba(0, 0, 0, 0)",
+  },
+  visible: {
+    pathLength: 1,
+    fill: "rgba(255, 255, 255, 1)",
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
+    },
+  },
+};

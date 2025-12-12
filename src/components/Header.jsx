@@ -1,21 +1,33 @@
 import React from "react";
 import { motion } from "motion/react";
-import { slideUp } from "../utils/variants";
+import { pathVariants, slideUp, svgVariants } from "../utils/variants";
 const Header = () => {
   return (
     <header>
       <div className="logo">
-        <svg
+        <motion.svg
+          variants={svgVariants}
           className="pizza-svg"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 100"
+          initial="hidden"
+          animate="visible"
         >
-          <path
+          <motion.path
+            variants={pathVariants}
+            initial="hidden"
+            animate="visible"
             fill="none"
             d="M40 40 L80 40 C80 40 80 80 40 80 C40 80 0 80 0 40 C0 40 0 0 40 0Z"
           />
-          <path fill="none" d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z" />
-        </svg>
+          <motion.path
+            variants={pathVariants}
+            initial="hidden"
+            animate="visible"
+            fill="none"
+            d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
+          />
+        </motion.svg>
       </div>
       <div className="title">
         <motion.h1
