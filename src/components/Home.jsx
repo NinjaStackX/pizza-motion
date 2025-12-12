@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "motion/react";
-import { containerVariants, slideUp } from "../utils/variants";
+import { AnimatePresence, motion, useCycle } from "motion/react";
+import { containerVariants, loaderVariants, slideUp } from "../utils/variants";
+import Loader from "./Loader";
 
 const Home = () => {
+  const [animation, cycleAnimation] = useCycle("animationOne", "animationTwo");
   return (
     <motion.div
       className="home container"
@@ -24,6 +26,16 @@ const Home = () => {
           Create Your Pizza
         </motion.button>
       </Link>
+      <Loader direction={animation} />
+
+      <button
+        style={{
+          fontSize: "16px",
+        }}
+        onClick={() => cycleAnimation()}
+      >
+        change Animation
+      </button>
     </motion.div>
   );
 };

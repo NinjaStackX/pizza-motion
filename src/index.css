@@ -154,15 +154,24 @@ li span.active::before {
 }
 
 .modal button:hover {
-  background: #1e3a8a;
+  background: #4f1e8aff;
 }
 
 .modal h2 {
   margin-bottom: 1rem;
-  color: #1e3a8a;
+  font-size: large;
+  color: #661e8aff;
 }
 
 .modal p {
   color: #444;
+  font-size: medium;
   font-weight: 500;
+}
+.loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 40px auto;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+
 import { containerVariants, slideUp } from "../utils/variants";
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
@@ -30,16 +31,22 @@ const Base = ({ addBase, pizza }) => {
           );
         })}
       </ul>
-
-      {pizza.base && (
-        <div className="next">
-          <Link to="/toppings">
-            <motion.button variants={slideUp} whileHover="hover">
-              Next
-            </motion.button>
-          </Link>
-        </div>
-      )}
+      <AnimatePresence>
+        {pizza.base && (
+          <div className="next">
+            <Link to="/toppings">
+              <motion.button
+                variants={slideUp}
+                initial="initial"
+                animate="animate"
+                whileHover="hover"
+              >
+                Next
+              </motion.button>
+            </Link>
+          </div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

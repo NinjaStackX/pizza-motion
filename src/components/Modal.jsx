@@ -11,7 +11,6 @@ export default function Modal({ setModal }) {
       exit={{ opacity: 0 }}
       onClick={() => {
         setModal(false);
-        console.log("parent");
       }}
     >
       <motion.div
@@ -22,13 +21,12 @@ export default function Modal({ setModal }) {
         transition={{ duration: 0.3 }}
         onClick={(e) => {
           e.stopPropagation();
-          console.log("child");
         }}
       >
-        <h2>Hi I'm Modal</h2>
-        <p>محتوى المودال هون</p>
+        <h2>Hi I'm Delicious pizza</h2>
+        <p> Welcome to our Kitchen </p>
         <Link to="/">
-          <button onClick={() => setModal(false)}>Try Again!</button>
+          <button onClick={() => setModal(false)}>Cook me again! </button>
         </Link>
       </motion.div>
     </motion.div>

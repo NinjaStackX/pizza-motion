@@ -6,6 +6,9 @@ const Header = () => {
     <header>
       <div className="logo">
         <motion.svg
+          drag
+          dragElastic={0.7}
+          dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           variants={svgVariants}
           className="pizza-svg"
           xmlns="http://www.w3.org/2000/svg"

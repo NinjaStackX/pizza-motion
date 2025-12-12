@@ -10,7 +10,7 @@ export const slideUp = {
   animate: {
     y: [0, 100, 0],
     opacity: [0, 0, 0, 0, 0, 1],
-    transition: { duration: 1.5 },
+    transition: { duration: 0.8 },
   },
   hover: {
     scale: 1.1,
@@ -123,6 +123,42 @@ export const pathVariants = {
     transition: {
       duration: 2,
       ease: "easeInOut",
+    },
+  },
+};
+export const loaderVariants = {
+  animationOne: {
+    x: [0, 20],
+    y: [0, -30],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 0.5,
+      },
+      y: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 0.25,
+        ease: "easeOut",
+      },
+    },
+  },
+  animationTwo: {
+    x: 0,
+    y: [-30, 0, 30],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 0.25,
+      },
+      y: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 0.5,
+        ease: "easeOut",
+      },
     },
   },
 };

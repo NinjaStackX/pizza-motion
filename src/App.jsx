@@ -47,8 +47,8 @@ function App() {
           />
           <Route path="/" element={<Home />} />
         </Routes>
-      </AnimatePresence>
-      {/* <motion.button
+
+        {/* <motion.button
         variants={slideUp}
         whileHover="hover"
         initial="hidden"
@@ -57,7 +57,7 @@ function App() {
       >
         Modal
       </motion.button> */}
-      <AnimatePresence mode="wait">
+
         {tit && <Modal setModal={setTit} />}
       </AnimatePresence>
     </>
