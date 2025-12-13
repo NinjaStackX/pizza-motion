@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "",
+  base: "/pizza-motion",
   test: {
     // <--- الجزء الخاص بـ Vitest
     globals: true, // يتيح لك استخدام 'describe', 'it', 'expect' عالميًا

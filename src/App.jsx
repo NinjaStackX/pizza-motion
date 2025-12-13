@@ -32,7 +32,7 @@ function App() {
     <>
       <Header />
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.key}>
+        <Routes location={location} key={location.key} initialEntries={["/"]}>
           <Route
             path="/base"
             element={<Base addBase={addBase} pizza={pizza} />}
